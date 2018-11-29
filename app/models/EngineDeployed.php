@@ -7,7 +7,7 @@ class TurbDeployed
   public $engineId;
   public $clientId;
   public $deployedDate;
-  public $serialNumber;
+  public $trainSerialNumber;
   public $totalFiredHours;
   public $totalStarts;
   public $lastMaintenanceDate;
@@ -18,7 +18,7 @@ class TurbDeployed
   $this->engineId = isset($data['engineId']) ? intval($data['engineId']) : null;
   $this->clientId = $data['clientId'];
   $this->deployedDate = $data['deployedDate'];
-  $this->serialNumber = $data['serialNumber'];
+  $this->trainSerialNumber = $data['trainSerialNumber'];
   $this->totalFiredHours = $data['totalFiredHours'];
   $this->totalStarts = $data['totalStarts'];
   $this->lastMaintenanceDate = $data['lastMaintenanceDate'];
