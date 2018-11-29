@@ -14,3 +14,4 @@ require 'environment.php';
 /** models **/
 require 'models/Client.php';
 require 'models/Engine.php';
+require 'models/EngineDeployed.php';
