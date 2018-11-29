@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pagestyle.css">
 
     <title>Cummins Home</title>
   </head>
@@ -30,67 +31,59 @@
 
       <br />
 
-      <h2 align="center" class="subheaderClass">Cummins Client List <br /> <p class="subtext">
-        Please choose a client below for performance information.
+      <h2 align="center" class="subheaderClass">Cummins Login<br /> <p class="subtext">
       </p></h2>
 
       <div class="row">
 
       <div class="col-lg-6 portfolio-item">
-        <div class="card h-70">
-          <a href="http://ec2-34-216-141-243.us-west-2.compute.amazonaws.com/client.html?clientId=1"><img class="card-img-top" src="images/windmill.jpeg" alt="hoosierEnergy"></a>
-            <div class="card-body">
-              <h3 class="card-title">
-                <a href="http://ec2-34-216-141-243.us-west-2.compute.amazonaws.com/client.html?clientId=1">Hoosier Energy</a>
-              </h3>
-                        <p class="card-text"> <b>Headquarters: </b> Bloomington, IN  <br /> <b>Sector: </b> Energy <br /> <b> Sub Industry: </b> Energy Production</p>
-            </div>
+      <form action="action_page.php">
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
         </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
       </div>
 
-      <br />
+      <h2 align="center" class="subheaderClass">Client Login<br /> <p class="subtext">
+      </p></h2>
 
       <div class="col-lg-6 portfolio-item">
-        <div class="card h-70">
-          <a href="http://ec2-34-216-141-243.us-west-2.compute.amazonaws.com/client.html?clientId=2"><img class="card-img-top" src="images/windmill2.jpg" alt="hoosierEnergy"></a>
-            <div class="card-body">
-              <h3 class="card-title">
-                <a href="http://ec2-34-216-141-243.us-west-2.compute.amazonaws.com/client.html?clientId=2">Pacific Tidal Energy</a>
-              </h3>
-              <p class="card-text"> <b>Headquarters: </b> Charlotte, NC  <br /> <b>Sector: </b> Energy <br /> <b> Sub Industry: </b> Energy Service</p>
-            </div>
+      <form action="action_page.php">
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
         </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
       </div>
-
-      </div>
-
-      <br />
-      <br />
-
-
-  <div class="footer">
-  <div class="row">
-
-    <div class="col-lg-4 col-sm-4 portfolio-item">
-      <center>
-        <p> &emsp; Alternative Green Systems </p>
-      </center>
-    </div>
-
-    <div class="col-lg-4 col-sm-4 portfolio-item">
-      <center>
-        <p> Home Page </p>
-      </center>
-    </div>
-
-  <div class="col-lg-4 col-sm-4 portfolio-item">
-    <center>
-      <p> Contact us at support@ags.com </p>
-    </center>
-  </div>
-  </div>
-  </div>
-
     </main>
   </body>
 </html>
