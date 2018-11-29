@@ -15,3 +15,4 @@ require 'environment.php';
 require 'models/Client.php';
 require 'models/Engine.php';
 require 'models/EngineDeployed.php';
+require 'models/TimeSeries.php';
