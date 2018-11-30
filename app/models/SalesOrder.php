@@ -14,7 +14,7 @@ class Sales
   $this->orderId = isset($data['orderId']) ? intval($data['orderId']) : null;
   $this->clientId = isset($data['clientId']) ? intval($data['clientId']) : null;
   $this->engineId = isset($data['engineId']) ? intval($data['engineId']) : null;
-  $this->orderDate = $date['orderDate'];
+  $this->orderDate = $data['orderDate'];
   $this->orderQuantity = $data['orderQuantity'];
   $this->orderStatus = $data['orderStatus'];
 
