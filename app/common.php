@@ -18,3 +18,4 @@ require 'models/EngineDeployed.php';
 require 'models/TimeSeries.php';
 require 'models/SalesOrder.php';
 require 'models/ClientLogin.php';
+require 'models/cumminsLogin.php';
