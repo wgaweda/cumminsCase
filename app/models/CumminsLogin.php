@@ -23,7 +23,7 @@
       //4. handle the results
       $arr = [];
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-        $theClientList = new Login($row);
+        $theClientList = new Cummins($row);
         array_push($arr, $theClientList);
       }
       return $arr;
