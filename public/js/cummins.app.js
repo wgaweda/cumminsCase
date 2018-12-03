@@ -4,7 +4,8 @@ var clientApp = new Vue({
     clients: [],
     engines: [],
     orders: [],
-    deployed: []
+    deployed: [],
+    series: []
 
 },
 methods: {
@@ -39,6 +40,16 @@ methods: {
     })
   },
 
+  fetchSeries(eid) {
+  fetch('api/timeSeries.php?engineDeployedId='+eid)
+  .then( response => response.json() )
+  .then( json => {this.series = json; console.log(this.series)} )
+  .catch( err => {
+      console.log('TIME SERIES FETCH ERROR:');
+      console.log(err);
+    })
+  },
+
 
   gotoClient (cid) {
     window.location = 'clientEngines.html?clientId=' + cid;
@@ -63,6 +74,21 @@ methods: {
     this.fetchClient(clientId);
     this.fetchEngine(clientId);
     this.fetchDeployed(clientId);
+
+  },
+
+  created () {
+    const url = new URL(window.location.href);
+    const engineDeployedId = url.searchParams.get('engineDeployedId') || 0;
+    console.log('Engine Deployed ID: '+ engineDeployedId);
+    this.deployed.engineDeployedId = engineDeployedId;
+
+    if (!engineDeployedId) {
+      console.error('Engine Deployed Id not defined in URL parameters.')
+    }
+
+
+    this.fetchSeries(engineDeployedId);
 
   }
 

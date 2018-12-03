@@ -45,43 +45,33 @@
 
   </center>
 
-  <div v-for="e in engines">
-
-  <div class="container">
-  <div class="box">
-  <div class="col-lg-12">
-    <h2> {{ e.engineName }}  </h2>
-    Power: {{ e.power }}
-    <br />
-    Torque: {{ e.torque }}
-    <br />
-    {{ e.certification }}
-
-  </div>
-  </div>
-  </div>
-
-  </div>
-
   <div>
     <table class="col-lg-6 col-sm-6 table table-hover" id="table">
       <thead>
           <tr>
             <th>Engine Deployed ID</th>
-            <th>Deployed Date</th>
-            <th>Train Serial Number</th>
-            <th>Total Fired Hours</th>
-            <th>Total Start</th>
-            <th>Last Maintenance Date</th>
+            <th>Data Collected Date</th>
+            <th>Output</th>
+            <th>Heat Rate</th>
+            <th>Compressory Efficiency</th>
+            <th>Availability</th>
+            <th>Reliability</th>
+            <th>Fired Hours</th>
+            <th>Trips</th>
+            <th>Starts</th>
           </tr>
       </thead>
-          <tbody v-for="d in deployed" @click="gotoEngine(d.engineDeployedId)">
-            <td>{{ d.engineDeployedId }}</td>
-            <td>{{ d.deployedDate }}</td>
-            <td>{{ d.trainSerialNumber }}</td>
-            <td>{{ d.totalFiredHours }}</td>
-            <td>{{ d.totalStarts }}</td>
-            <td>{{ d.lastMaintenanceDate}}</td>
+          <tbody v-for="s in series">
+            <td>{{ s.engineDeployedId }}</td>
+            <td>{{ s.dataCollectedDate }}</td>
+            <td>{{ s.output }}</td>
+            <td>{{ s.heatRate }}</td>
+            <td>{{ s.compressorEfficiency }}</td>
+            <td>{{ s.availability }}</td>
+            <td>{{ s.reliability }}</td>
+            <td>{{ s.firedHours }}</td>
+            <td>{{ s.trips }}</td>
+            <td>{{ s.starts }}</td>
         </tbody>
         </table>
     </div>
