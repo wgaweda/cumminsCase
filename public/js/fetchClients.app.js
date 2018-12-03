@@ -15,7 +15,11 @@ methods: {
       console.log(err);
     })
 
-  }
+  },
+
+  gotoClient (cid) {
+    window.location = 'clientEngines.html?clientId=' + cid;
+  },
 
 }
 
