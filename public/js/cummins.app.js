@@ -77,20 +77,20 @@ methods: {
 
   },
 
-  created () {
-    const url = new URL(window.location.href);
-    const engineDeployedId = url.searchParams.get('engineDeployedId') || 0;
-    console.log('Engine Deployed ID: '+ engineDeployedId);
-    this.deployed.engineDeployedId = engineDeployedId;
-
-    if (!engineDeployedId) {
-      console.error('Engine Deployed Id not defined in URL parameters.')
-    }
-
-
-    this.fetchSeries(engineDeployedId);
-
-  }
+  // created () {
+  //   const url = new URL(window.location.href);
+  //   const engineDeployedId = url.searchParams.get('engineDeployedId') || 0;
+  //   console.log('Engine Deployed ID: '+ engineDeployedId);
+  //   this.deployed.engineDeployedId = engineDeployedId;
+  //
+  //   if (!engineDeployedId) {
+  //     console.error('Engine Deployed Id not defined in URL parameters.')
+  //   }
+  //
+  //
+  //   this.fetchSeries(engineDeployedId);
+  //
+  // }
 
 
 })
