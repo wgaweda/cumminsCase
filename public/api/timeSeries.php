@@ -2,10 +2,10 @@
 <?php
 require '../../app/common.php';
 
-$siteId = intval($_GET['clientId'] ?? 0);
+$siteId = intval($_GET['engineDeployedId'] ?? 0);
 
 if ($siteId < 1) {
-  throw new Exception('Invalid site ID in URL');
+  throw new Exception('Invalid EID in URL');
 }
 
 
