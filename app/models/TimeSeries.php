@@ -37,8 +37,7 @@ class Series
 
     //2. run a query
     $sql = 'SELECT * from timeSeries, engineDeployed
-    WHERE timeSeries.engineDeployedId = engineDeployed.engineDeployedId
-    AND engineDeployed.clientId = ?';
+    WHERE timeSeries.engineDeployedId = ?';
 
     $statement = $db->prepare($sql);
     //3. read the results
