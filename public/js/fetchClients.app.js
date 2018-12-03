@@ -9,9 +9,9 @@ methods: {
   fetchCummins () {
   fetch('api/allClient.php')
     .then( response => response.json() )
-    .then( json => {this.clientList = json; console.log(this.clientList)} )
+    .then( json => {cumminsApp.clientList = json; console.log(cumminsApp.clientList)} )
     .catch( err => {
-      console.log('TEAM LIST ERROR:');
+      console.log('CLIENT LIST ERROR:');
       console.log(err);
     })
 
