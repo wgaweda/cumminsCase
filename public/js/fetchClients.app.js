@@ -21,6 +21,8 @@ methods: {
     window.location = 'clientEngines.html?clientId=' + cid;
   },
 
-}
+},
+
+this.fetchCummins()
 
 })
