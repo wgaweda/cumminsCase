@@ -34,8 +34,6 @@ methods: {
 
 
     this.fetchClient(clientId);
-    this.fetchNotes(clientId);
-    this.fetchSite(clientId);
   }
 
 

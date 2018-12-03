@@ -19,3 +19,4 @@ require 'models/TimeSeries.php';
 require 'models/SalesOrder.php';
 require 'models/ClientLogin.php';
 require 'models/CumminsLogin.php';
+require 'models/AllClient.php';
