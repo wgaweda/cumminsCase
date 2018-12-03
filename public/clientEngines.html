@@ -99,12 +99,12 @@
               <th>Order Status</th>
             </tr>
         </thead>
-            <tbody v-for="d in deployed">
-              <td>{{ c.engineId }}</td>
-              <td>{{ c.deployedDate }}</td>
-              <td>{{ c.orderDate }}</td>
-              <td>{{ c.orderQuantity }}</td>
-              <td>{{ c.orderStatus }}</td>
+            <tbody v-for="o in orders">
+              <td>{{ o.engineId }}</td>
+              <td>{{ o.deployedDate }}</td>
+              <td>{{ o.orderDate }}</td>
+              <td>{{ o.orderQuantity }}</td>
+              <td>{{ o.orderStatus }}</td>
           </tbody>
           </table>
       </div>
