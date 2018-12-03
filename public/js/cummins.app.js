@@ -40,6 +40,16 @@ methods: {
     })
   },
 
+  fetchSales(cid) {
+  fetch('api/salesOrder.php?clientId='+cid)
+  .then( response => response.json() )
+  .then( json => {this.order = json; console.log(this.order)} )
+  .catch( err => {
+      console.log('ENGINES FETCH ERROR:');
+      console.log(err);
+    })
+  },
+
 
   gotoClient (cid) {
     window.location = 'clientEngines.html?clientId=' + cid;
@@ -64,6 +74,7 @@ methods: {
     this.fetchClient(clientId);
     this.fetchEngine(clientId);
     this.fetchDeployed(clientId);
+    this.fetchSales(clientId);
 
   },
 

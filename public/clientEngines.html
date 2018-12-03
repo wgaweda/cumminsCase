@@ -64,6 +64,7 @@
   </div>
 
   <div>
+    <h3 align="center">Engine Deployed Data</h3>
     <table class="col-lg-6 col-sm-6 table table-hover" id="table">
       <thead>
           <tr>
@@ -85,6 +86,28 @@
         </tbody>
         </table>
     </div>
+
+    <div>
+      <h3 align="center">Order History</h3>
+      <table class="col-lg-6 col-sm-6 table table-hover" id="table">
+        <thead>
+            <tr>
+              <th>Engine ID</th>
+              <th>Deployed Date</th>
+              <th>Order Date</th>
+              <th>Order Quantity</th>
+              <th>Order Status</th>
+            </tr>
+        </thead>
+            <tbody v-for="d in deployed">
+              <td>{{ c.engineId }}</td>
+              <td>{{ c.deployedDate }}</td>
+              <td>{{ c.orderDate }}</td>
+              <td>{{ c.orderQuantity }}</td>
+              <td>{{ c.orderStatus }}</td>
+          </tbody>
+          </table>
+      </div>
 
 
 </main>
