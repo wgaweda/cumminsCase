@@ -74,7 +74,7 @@ methods: {
     this.deployed.engineDeployedId = engineDeployedId;
 
 
-    fetch('api/timeSeries.php?engineDeployedId='+eid)
+    fetch('api/timeSeries.php?engineDeployedId='+engineDeployedId)
     .then( response => response.json() )
     .then( json => {this.series = json; console.log(this.series)} )
     .catch( err => {
