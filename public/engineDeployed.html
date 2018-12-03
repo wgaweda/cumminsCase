@@ -21,29 +21,7 @@
   </nav>
 
   <body class="bodyClass">
-  <main id="clientsMain">
-
-  <center>
-
-    <div v-for="c in clients"
-    :key="c.clientId">
-
-    <h2 class="headerClass">{{ c.clientName }}</h2>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          Headquarters: {{ c.headquarters }}
-          <br />
-          Sector: {{ c.sector }}
-
-        </div>
-        </div>
-
-    </div>
-  </div>
-
-  </center>
+  <main id="seriesMain">
 
   <div>
     <table class="col-lg-6 col-sm-6 table table-hover" id="table">
@@ -80,7 +58,7 @@
 </main>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/cummins.app.js"></script>
+  <script src="js/series.app.js"></script>
 
   </body>
   </html>
