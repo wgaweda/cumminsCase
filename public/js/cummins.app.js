@@ -40,16 +40,6 @@ methods: {
     })
   },
 
-  fetchSeries(eid) {
-  fetch('api/timeSeries.php?engineDeployedId='+eid)
-  .then( response => response.json() )
-  .then( json => {this.series = json; console.log(this.series)} )
-  .catch( err => {
-      console.log('TIME SERIES FETCH ERROR:');
-      console.log(err);
-    })
-  },
-
 
   gotoClient (cid) {
     window.location = 'clientEngines.html?clientId=' + cid;
@@ -83,14 +73,15 @@ methods: {
     console.log('Engine Deployed ID: '+ engineDeployedId);
     this.deployed.engineDeployedId = engineDeployedId;
 
-    if (!engineDeployedId) {
-      console.error('Engine Deployed Id not defined in URL parameters.')
+
+    fetch('api/timeSeries.php?engineDeployedId='+eid)
+    .then( response => response.json() )
+    .then( json => {this.series = json; console.log(this.series)} )
+    .catch( err => {
+        console.log('TIME SERIES FETCH ERROR:');
+        console.log(err);
+      })
     }
-
-
-    this.fetchSeries(engineDeployedId);
-
-  }
 
 
 })
