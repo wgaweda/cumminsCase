@@ -43,7 +43,7 @@ methods: {
   fetchSales(cid) {
   fetch('api/salesOrder.php?clientId='+cid)
   .then( response => response.json() )
-  .then( json => {this.order = json; console.log(this.order)} )
+  .then( json => {this.orders = json; console.log(this.orders)} )
   .catch( err => {
       console.log('ENGINES FETCH ERROR:');
       console.log(err);
