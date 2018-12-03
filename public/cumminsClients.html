@@ -1,0 +1,144 @@
+<!doctype HTML>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/pagestyle.css">
+
+    <title>Client 1</title>
+  </head>
+<nav>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="http://ec2-34-216-141-243.us-west-2.compute.amazonaws.com/note.html">Client Notes</a>
+
+  </div>
+  </nav>
+
+  <body class="bodyClass">
+  <main id="clientsMain">
+
+  <center>
+
+    <div v-for="c in clients"
+    :key="c.clientId">
+
+    <h2 class="headerClass">{{ c.clientName }}</h2>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          Headquarters: {{ c.headquarters }}
+          <br />
+          Sector: {{ c.gicsSector }}
+          <br />
+          Sub Industry: {{ c.gicsSubIndustry }}
+        </div>
+        <div class="col">
+          {{ c.clientDescription}}
+        </div>
+        </div>
+
+    </div>
+  </div>
+
+  </center>
+
+    <br />
+    <br />
+
+  <center>
+    <h2 align="center" class="subheaderClass">Site Listings <br /> <p class="subtext">
+    Please click a site name below for turbine KPI information.
+    </p></h2>
+  </center>
+
+  <br />
+
+  <div v-for="s in sites">
+
+  <div class="container">
+  <div class="box">
+  <div class="col-lg-12">
+    <h2 @click="gotoTurbine(s.siteId)"> {{ s.siteName }}  </h2>
+    <br />
+    <p @click="gotoTurbine(s.siteId)">
+    {{ s.siteDescription }}
+    <br />
+    Primary Contact: {{ s.primaryContact }}
+    Capacity: {{ s.capacity }}
+    Commercial Date: {{ s.commercialDate }}
+    <br />
+    Address: {{ s.addrLine1 }}, {{ s.addrCity }}, {{ s.addrState }}, {{ s.addrZip }}, {{ s.addrCountry }}
+
+  </p>
+
+  </div>
+  </div>
+  </div>
+</div>
+
+<br />
+<br />
+
+
+  <div align="center">
+
+    <br />
+    <br />
+    <table class="col-lg-6 col-sm-6 table table-hover" id="table">
+      <thead>
+      <tr>
+        <th>
+          Client Notes
+        </th>
+      </tr>
+      </thead>
+      <tbody v-for="n in clientNotes">
+        <td>
+          {{ n.notes }}
+        </td>
+    </tbody>
+    </table>
+  </div>
+
+  <br />
+  <br />
+
+  <div class="footer">
+  <div class="row">
+
+    <div class="col-lg-4 col-sm-4 portfolio-item">
+      <center>
+        <p> &emsp; Alternative Green Systems </p>
+      </center>
+    </div>
+
+    <div class="col-lg-4 col-sm-4 portfolio-item">
+      <center>
+        <p> Client Page </p>
+      </center>
+    </div>
+
+  <div class="col-lg-4 col-sm-4 portfolio-item">
+    <center>
+      <p> Contact us at support@ags.com </p>
+    </center>
+  </div>
+  </div>
+  </div>
+
+</main>
+
+    <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/client.app.js"></script>
+
+  </body>
+  </html>
