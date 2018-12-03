@@ -36,8 +36,8 @@ class Series
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
     //2. run a query
-    $sql = 'SELECT * from timeSeries, engineDeployed
-    WHERE timeSeries.engineDeployedId = ?';
+    $sql = 'SELECT * from timeSeries
+    WHERE engineDeployedId = ?';
 
     $statement = $db->prepare($sql);
     //3. read the results
