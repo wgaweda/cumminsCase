@@ -3,7 +3,8 @@ var clientApp = new Vue({
   data:{
     clients: [],
     engines: [],
-    orders: []
+    orders: [],
+    deployed: []
 
 },
 methods: {
@@ -28,13 +29,23 @@ methods: {
     })
   },
 
+  fetchDeployed(cid) {
+  fetch('api/engineDeployed.php?clientId='+cid)
+  .then( response => response.json() )
+  .then( json => {this.deployed = json; console.log(this.deployed)} )
+  .catch( err => {
+      console.log('ENGINES FETCH ERROR:');
+      console.log(err);
+    })
+  },
+
 
   gotoClient (cid) {
     window.location = 'clientEngines.html?clientId=' + cid;
   },
 
-  gotoEngine (cid) {
-    window.location = 'turbine.html?siteId=' + cid;
+  gotoEngine (did) {
+    window.location = 'engineDeployed.html?engineDeployedId=' + did;
   },
 
 },
@@ -51,6 +62,7 @@ methods: {
 
     this.fetchClient(clientId);
     this.fetchEngine(clientId);
+    this.fetchDeployed(clientId);
 
   }
 
