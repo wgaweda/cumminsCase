@@ -30,10 +30,14 @@ methods: {
 
 
   gotoClient (cid) {
-    window.location = 'client.html?clientId=' + cid;
+    window.location = 'clientEngines.html?clientId=' + cid;
   },
 
+  gotoEngine (cid) {
+    window.location = 'turbine.html?siteId=' + cid;
   },
+
+},
   created() {
     const url = new URL(window.location.href);
     const clientId = url.searchParams.get('clientId') || 0;
@@ -47,6 +51,7 @@ methods: {
 
     this.fetchClient(clientId);
     this.fetchEngine(clientId);
+
   }
 
 
