@@ -9,7 +9,7 @@ methods: {
   fetchCummins () {
   fetch('api/allClient.php')
     .then( response => response.json() )
-    .then( json => {tasksApp.clientList = json} )
+    .then( json => {tasksApp.clientList = json; console.log(this.clientList)} )
     .catch( err => {
       console.log('TEAM LIST ERROR:');
       console.log(err);
