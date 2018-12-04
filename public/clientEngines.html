@@ -73,7 +73,7 @@
               <!-- <input type="number" id="client" v-model="noteForm.clientId" class="form-control" placeholder="Enter Client ID" required> -->
 
             <select id="client" v-model="noteForm.clientId" class="form-control" required>
-                <option v-for="c in clientList"
+                <option v-for="c in clients"
                           :key="c.clientId"
                           :value="c.clientId">{{ c.clientName }}</option>
             </select>
