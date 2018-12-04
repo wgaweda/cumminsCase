@@ -66,7 +66,7 @@
 
         <div class="container">
           <label for="client"><b>Client</b></label>
-          <select id="team" v-model="workForm.team_id" class="form-control" required>
+          <select id="team" class="form-control" required>
               <option v-for="c in clientList"
                         :key="c.clientId"
                         :value="c.clientId">{{ c.clientName }}</option>
