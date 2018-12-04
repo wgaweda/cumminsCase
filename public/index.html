@@ -61,8 +61,8 @@
       <h2 align="center" class="subheaderClass">Client Login<br /> <p class="subtext">
       </p></h2>
 
-      <div class="col-lg-6 portfolio-item">
-      <form action="http://ec2-34-210-206-120.us-west-2.compute.amazonaws.com/clientEngines.html?clientId=">
+      <div v-for="c in clientList" class="col-lg-6 portfolio-item">
+      <form action="gotoClient(c.clientId)">
 
         <div class="container">
           <label for="client"><b>Client</b></label>
