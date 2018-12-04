@@ -62,7 +62,7 @@
       </p></h2>
 
       <div v-for="c in clientList" class="col-lg-6 portfolio-item">
-      <form action="gotoClient(c.clientId)">
+      <form>
 
         <div class="container">
           <label for="client"><b>Client</b></label>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="cancelbtn">Cancel</button>
+          <button @click="gotoClient(c.clientId)" type="button" class="cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form>
