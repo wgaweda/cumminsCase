@@ -71,6 +71,10 @@ methods: {
     window.location = 'engineDeployed.html?engineDeployedId=' + did;
   },
 
+  gotoClientNotes (cid) {
+    window.location = 'clientNotes.html?clientId=' + cid;
+  },
+
   handleNoteForm(e) {
 
      const s = JSON.stringify(this.noteForm);

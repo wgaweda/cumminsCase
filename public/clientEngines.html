@@ -43,6 +43,8 @@
     </div>
   </div>
 
+    <h2 @click="gotoClient(Notesc.clientId)"> {{ c.clientName }}  </h2>
+
   </center>
   <div class="row">
 
@@ -61,42 +63,9 @@
   </div>
   </div>
   </div>
-
   </div>
-
-  <div class="col">
-    <form id="newNoteForm" @submit.prevent="handleNoteForm">
-
-        <div class="form-group row">
-          <label for="client" class="col-sm-2 col-form-label">Client ID: </label>
-          <div class="col-sm-3 col-md-2 col-lg-2">
-              <input type="number" id="client" v-model="noteForm.clientId" class="form-control" placeholder="Enter Client ID" required>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="employee" class="col-sm-2 col-form-label">Employee ID: </label>
-          <div class="col-sm-3 col-md-2 col-lg-2">
-              <input type="number" id="employee" v-model="noteForm.employeeId" class="form-control" placeholder="Enter Employee ID" required>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="notes" class="col-sm-2 col-form-label">Client Notes: </label>
-
-          <div class="col-sm-8">
-            <input type="text" id="notes" style="height: 300px;" v-model="noteForm.notes" class="form-control" placeholder="Enter Client Notes" required>
-
-          </div>
-        </div>
-
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-        <button id="submitNewNote" type="submit" class="btn btn-primary">Submit Note</button>
-    </form>
-  </div>
-
 </div>
-
+<center>
   <div>
     <h3 align="center">Engine Deployed Data</h3>
     <table class="col-lg-6 col-sm-6 table table-hover" id="table">
@@ -140,7 +109,7 @@
           </tbody>
           </table>
       </div>
-
+</center>
 
 </main>
 
