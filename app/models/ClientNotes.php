@@ -39,7 +39,8 @@ public static function fetchNotesByClientId(int $clientId) {
     $success = $statement->execute([
       $this->Id,
       $this->clientId,
-      $this->notes,
+      $this->employeeId,
+      $this->notes
     ]);
     $this->id = $db->lastInsertId();
   }
