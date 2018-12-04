@@ -3,7 +3,7 @@ class Notes
 {
   public $Id;
   public $clientId;
-  public $employeeId
+  public $employeeId;
   public $notes;
 
   public function __construct($data) {
