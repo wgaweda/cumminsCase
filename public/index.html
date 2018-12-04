@@ -27,7 +27,7 @@
 
   <body>
 
-    <main class="container-fluid">
+    <main id="cumminsMain" class="container-fluid">
 
       <br />
 
@@ -62,9 +62,16 @@
       </p></h2>
 
       <div class="col-lg-6 portfolio-item">
-      <form action="action_page.php">
+      <form action="http://ec2-34-210-206-120.us-west-2.compute.amazonaws.com/clientEngines.html?clientId=">
 
         <div class="container">
+          <label for="client"><b>Client</b></label>
+          <select id="team" v-model="workForm.team_id" class="form-control" required>
+              <option v-for="c in clientList"
+                        :key="c.clientId"
+                        :value="c.clientId">{{ c.clientName }}</option>
+          </select>
+
           <label for="uname"><b>Username</b></label>
           <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -82,7 +89,12 @@
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form>
+
       </div>
     </main>
+
+        <script src="js/fetchClients.app.js"></script>
+
   </body>
+
 </html>
