@@ -61,7 +61,7 @@
       <h2 align="center" class="subheaderClass">Client Login<br /> <p class="subtext">
       </p></h2>
 
-      <div v-for="c in clientList" class="col-lg-6 portfolio-item">
+      <div class="col-lg-6 portfolio-item">
       <form>
 
         <div class="container">
@@ -85,7 +85,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-          <button @click="gotoClient(c.clientId)" type="button" class="cancelbtn">Cancel</button>
+          <button @click="gotoClient(clientList.clientId)" type="button" class="cancelbtn">Cancel</button>
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form>
