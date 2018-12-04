@@ -5,7 +5,9 @@ var clientApp = new Vue({
     engines: [],
     orders: [],
     deployed: [],
-    series: []
+    series: [],
+    clientNotes: [],
+    noteForm: {}
 
 },
 methods: {
@@ -50,6 +52,16 @@ methods: {
     })
   },
 
+  fetchNotes(cid) {
+  fetch('api/clientNotes.php?clientId='+cid)
+  .then( response => response.json() )
+  .then( json => {this.clientNotes = json; console.log(this.clientNotes)} )
+  .catch( err => {
+      console.log('CLIENT NOTES FETCH ERROR:');
+      console.log(err);
+    })
+  },
+
 
   gotoClient (cid) {
     window.location = 'clientEngines.html?clientId=' + cid;
@@ -58,6 +70,38 @@ methods: {
   gotoEngine (did) {
     window.location = 'engineDeployed.html?engineDeployedId=' + did;
   },
+
+  handleNoteForm(e) {
+
+     const s = JSON.stringify(this.noteForm);
+
+     console.log(s);
+
+     // POST to remote server
+     fetch('../api/clientNotes.php', {
+       method: "POST", // *GET, POST, PUT, DELETE, etc.
+       headers: {
+           "Content-Type": "application/json; charset=utf-8"
+       },
+       body: s // body data type must match "Content-Type" header
+     })
+
+     .then( response => response.json() )
+     .then( json => {this.clientNotes.push(json)})
+     .catch( err => {
+       console.error('NOTE POST ERROR:');
+       console.error(err);
+     })
+
+     // Reset noteForm
+     this.noteForm = this.getEmptyNoteForm();
+   },
+
+   getEmptyNoteForm() {
+     return {
+     }
+   },
+
 
 },
   created() {
@@ -75,6 +119,7 @@ methods: {
     this.fetchEngine(clientId);
     this.fetchDeployed(clientId);
     this.fetchSales(clientId);
+    this.fetchNotes(clientId);
 
   },
 
