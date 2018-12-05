@@ -18,7 +18,7 @@ methods: {
   },
 
 
-fetchSensorTimeSeries (sid) {
+fetchSensorTimeSeries (eid) {
   fetch('api/timeSeries.php?engineDeployedId='+eid)
   .then( response => response.json() )
   .then( json => {this.series = json;
@@ -483,6 +483,7 @@ buildOutputChart() {
 
 
     this.fetchSeries(engineDeployedId);
+    this.fetchSensorTimeSeries(engineDeployedId);
 
   }
 
