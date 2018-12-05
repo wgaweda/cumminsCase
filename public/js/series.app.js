@@ -52,13 +52,13 @@ buildOutputChart() {
     var data = {};
     console.log('start data is', data);
     this.series.forEach(i => {
-      if (!(i.sensorDeployedId in data)) {
-        data[i.sensorDeployedId] = [];
-        console.log('created', data[i.sensorDeployedId]);
+      if (!(i.engineDeployedId in data)) {
+        data[i.engineDeployedId] = [];
+        console.log('created', data[i.engineDeployedId]);
       } else {
         console.log('array is already defined');
       }
-      data[i.sensorDeployedId].push([i.dataCollectedDate, i.output]);
+      data[i.engineDeployedId].push([i.dataCollectedDate, i.output]);
     });
     console.log('Restructured data');
     console.log(data);
@@ -122,13 +122,13 @@ buildOutputChart() {
        var data = {};
        console.log('start data is', data);
        this.series.forEach(i => {
-         if (!(i.sensorDeployedId in data)) {
-           data[i.sensorDeployedId] = [];
-           console.log('created', data[i.sensorDeployedId]);
+         if (!(i.engineDeployedId in data)) {
+           data[i.engineDeployedId] = [];
+           console.log('created', data[i.engineDeployedId]);
          } else {
            console.log('array is already defined');
          }
-         data[i.sensorDeployedId].push([i.dataCollectedDate, i.heatRate]);
+         data[i.engineDeployedId].push([i.dataCollectedDate, i.heatRate]);
        });
        console.log('Restructured data');
        console.log(data);
@@ -191,13 +191,13 @@ buildOutputChart() {
           var data = {};
           console.log('start data is', data);
           this.series.forEach(i => {
-            if (!(i.sensorDeployedId in data)) {
-              data[i.sensorDeployedId] = [];
-              console.log('created', data[i.sensorDeployedId]);
+            if (!(i.engineDeployedId in data)) {
+              data[i.engineDeployedId] = [];
+              console.log('created', data[i.engineDeployedId]);
             } else {
               console.log('array is already defined');
             }
-            data[i.sensorDeployedId].push([i.dataCollectedDate, i.compressorEfficiency]);
+            data[i.engineDeployedId].push([i.dataCollectedDate, i.compressorEfficiency]);
           });
           console.log('Restructured data');
           console.log(data);
@@ -261,13 +261,13 @@ buildOutputChart() {
           var data = {};
           console.log('start data is', data);
           this.series.forEach(i => {
-            if (!(i.sensorDeployedId in data)) {
-              data[i.sensorDeployedId] = [];
-              console.log('created', data[i.sensorDeployedId]);
+            if (!(i.engineDeployedId in data)) {
+              data[i.engineDeployedId] = [];
+              console.log('created', data[i.engineDeployedId]);
             } else {
               console.log('array is already defined');
             }
-            data[i.sensorDeployedId].push([i.dataCollectedDate, i.availability]);
+            data[i.engineDeployedId].push([i.dataCollectedDate, i.availability]);
           });
           console.log('Restructured data');
           console.log(data);
@@ -330,13 +330,13 @@ buildOutputChart() {
              var data = {};
              console.log('start data is', data);
              this.series.forEach(i => {
-               if (!(i.sensorDeployedId in data)) {
-                 data[i.sensorDeployedId] = [];
-                 console.log('created', data[i.sensorDeployedId]);
+               if (!(i.engineDeployedId in data)) {
+                 data[i.engineDeployedId] = [];
+                 console.log('created', data[i.engineDeployedId]);
                } else {
                  console.log('array is already defined');
                }
-               data[i.sensorDeployedId].push([i.dataCollectedDate, i.reliability]);
+               data[i.engineDeployedId].push([i.dataCollectedDate, i.reliability]);
              });
              console.log('Restructured data');
              console.log(data);
@@ -400,13 +400,13 @@ buildOutputChart() {
               var data = {};
               console.log('start data is', data);
               this.series.forEach(i => {
-                if (!(i.sensorDeployedId in data)) {
-                  data[i.sensorDeployedId] = [];
-                  console.log('created', data[i.sensorDeployedId]);
+                if (!(i.engineDeployedId in data)) {
+                  data[i.engineDeployedId] = [];
+                  console.log('created', data[i.engineDeployedId]);
                 } else {
                   console.log('array is already defined');
                 }
-                data[i.sensorDeployedId].push([i.dataCollectedDate, i.firedHours]);
+                data[i.engineDeployedId].push([i.dataCollectedDate, i.firedHours]);
               });
               console.log('Restructured data');
               console.log(data);
