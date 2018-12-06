@@ -152,7 +152,7 @@ a:link {
 .container .box:hover{
   box-shadow: 5px 5px 15px #666;
   border-color:#black;
-  background: #grey;
+  background: #black;
   color: #fff;
   cursor: pointer;
 
