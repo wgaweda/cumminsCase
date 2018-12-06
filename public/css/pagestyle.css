@@ -151,8 +151,7 @@ a:link {
 /*Fade out the particular DIV when user hover on that DIV*/
 .container .box:hover{
   box-shadow: 5px 5px 15px #666;
-  border-color:#black;
-  background: #black;
+
   color: #black;
   cursor: pointer;
 
